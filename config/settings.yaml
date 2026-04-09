@@ -1,0 +1,80 @@
+project:
+  name: "Hormuz Integrated Oil Research V2"
+  timezone: "UTC"
+  currency: "USD"
+
+run:
+  lookback_months: 3
+  frequency: "W-FRI"
+  max_companies: 80
+  rebuild_cache: false
+  debug: false
+
+paths:
+  data_root: "data"
+  raw: "data/raw"
+  interim: "data/interim"
+  processed: "data/processed"
+  cache: "data/cache"
+  logs: "data/logs"
+  output_root: "outputs"
+  output_excel: "outputs/excel"
+  output_word: "outputs/word"
+  output_charts: "outputs/charts"
+  output_debug: "outputs/debug"
+
+universe:
+  min_market_cap_usd: 8000000000
+  include_secondary_bucket: true
+  default_exchange_fallback: "Unknown"
+
+data_sources:
+  request_timeout_seconds: 30
+  max_retries: 3
+  retry_wait_seconds: 2
+  user_agent: "hormuz-research-bot/2.0"
+  yfinance_enabled: true
+
+risk:
+  chokepoints:
+    - "Strait of Hormuz"
+    - "Bab el-Mandeb"
+    - "Suez Canal"
+    - "Turkish Straits"
+    - "Cape of Good Hope"
+
+weights:
+  upstream_weight: 0.6
+  downstream_weight: 0.4
+
+v2:
+  model_version: "2.0"
+  assumptions_version: "2.0"
+  ranking_weights:
+    route_exposure: 0.20
+    oil_sensitivity: 0.12
+    downstream_pass_through: 0.08
+    valuation: 0.18
+    balance_sheet: 0.12
+    catalyst: 0.10
+    market_positioning: 0.10
+    scenario_resilience: 0.10
+  confidence_penalty:
+    High: 0.00
+    Medium: 0.05
+    Low: 0.12
+  scenario_brent_levels: [80, 90, 100, 120]
+
+quality:
+  fail_on_missing_core_market_data: false
+  allow_degraded_run: true
+  minimum_non_null_ratio_for_sheet: 0.20
+  minimum_non_null_ratio_for_chart: 0.20
+  minimum_non_null_ratio_for_section: 0.25
+  minimum_required_price_points: 4
+  minimum_required_equity_names: 4
+  minimum_required_valuation_coverage: 0.35
+  minimum_required_factor_coverage: 0.35
+  news_price_move_threshold_pct: 2.0
+  news_lookback_days: 30
+  max_articles_per_event_day: 3

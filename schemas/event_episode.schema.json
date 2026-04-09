@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EventEpisode",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "start_date",
+    "end_date",
+    "episode_type",
+    "summary",
+    "involved_event_days",
+    "cumulative_brent_move",
+    "cumulative_wti_move",
+    "mean_abs_move",
+    "peak_move",
+    "attribution_confidence",
+    "top_articles",
+    "episode_source_summary"
+  ],
+  "properties": {
+    "episode_id": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "episode_type": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "involved_event_days": {
+      "type": "string"
+    },
+    "cumulative_brent_move": {
+      "type": "number"
+    },
+    "cumulative_wti_move": {
+      "type": "number"
+    },
+    "mean_abs_move": {
+      "type": "number"
+    },
+    "peak_move": {
+      "type": "number"
+    },
+    "attribution_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "top_articles": {
+      "type": "string"
+    },
+    "episode_source_summary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

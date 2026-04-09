@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MarketConstraints",
+  "type": "object",
+  "required": [
+    "as_of_date",
+    "company_name",
+    "ticker",
+    "suggested_discount_rate_uplift_bps",
+    "suggested_beta_adjustment",
+    "suggested_risk_premium_bucket",
+    "scenario_probability_shift",
+    "geopolitical_stress_multiplier",
+    "confidence_penalty_recommendation",
+    "constraint_confidence",
+    "methodology_label",
+    "market_regime_impact_note"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "ticker": {
+      "type": "string"
+    },
+    "suggested_discount_rate_uplift_bps": {
+      "type": "number"
+    },
+    "suggested_discount_rate_uplift_range_bps": {
+      "type": "string"
+    },
+    "suggested_beta_adjustment": {
+      "type": "number"
+    },
+    "suggested_beta_adjustment_range": {
+      "type": "string"
+    },
+    "suggested_risk_premium_bucket": {
+      "type": "string"
+    },
+    "scenario_probability_shift": {
+      "type": "string"
+    },
+    "geopolitical_stress_multiplier": {
+      "type": "number"
+    },
+    "confidence_penalty_recommendation": {
+      "type": "number"
+    },
+    "constraint_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "methodology_label": {
+      "type": "string"
+    },
+    "market_regime_impact_note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

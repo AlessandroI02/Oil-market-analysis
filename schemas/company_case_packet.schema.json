@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompanyCasePacket",
+  "type": "object",
+  "required": [
+    "as_of_date",
+    "company_name",
+    "ticker",
+    "bucket_classification",
+    "archetype",
+    "inclusion_confidence",
+    "data_confidence",
+    "source_confidence",
+    "route_confidence",
+    "event_confidence",
+    "regime_confidence",
+    "packet_confidence",
+    "downstream_readiness_flag",
+    "regime_label",
+    "regime_summary",
+    "latest_brent_price",
+    "latest_wti_price",
+    "latest_fuel_proxy",
+    "stock_price_latest",
+    "stock_return_1w",
+    "stock_return_1m",
+    "oil_beta",
+    "sector_beta",
+    "market_beta",
+    "rates_beta",
+    "dxy_beta",
+    "rolling_oil_beta_20d",
+    "rolling_oil_beta_60d",
+    "rolling_oil_beta_90d",
+    "route_exposure_central",
+    "route_exposure_low",
+    "route_exposure_high",
+    "hormuz_share_pct",
+    "bab_el_mandeb_share_pct",
+    "suez_share_pct",
+    "non_chokepoint_share_pct",
+    "route_risk_label",
+    "rerouting_flexibility",
+    "pipeline_bypass_optionality",
+    "event_day_hit_rate_up_oil",
+    "event_day_hit_rate_down_oil",
+    "avg_abnormal_return_oil_up",
+    "avg_abnormal_return_oil_down",
+    "analogue_summary",
+    "next_relevant_catalysts",
+    "market_constraint_summary",
+    "suggested_discount_rate_uplift_bps",
+    "suggested_discount_rate_uplift_range_bps",
+    "suggested_beta_adjustment",
+    "suggested_beta_adjustment_range",
+    "suggested_risk_premium_bucket",
+    "suggested_scenario_probability_shift",
+    "constraint_confidence",
+    "confidence_summary",
+    "key_notes",
+    "source_summary"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "ticker": {
+      "type": "string"
+    },
+    "bucket_classification": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary",
+        "rejected"
+      ]
+    },
+    "archetype": {
+      "type": "string"
+    },
+    "inclusion_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "data_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "source_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "route_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "event_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "regime_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "packet_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "downstream_readiness_flag": {
+      "type": "boolean"
+    },
+    "regime_label": {
+      "type": "string"
+    },
+    "regime_summary": {
+      "type": "string"
+    },
+    "next_relevant_catalysts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_summary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

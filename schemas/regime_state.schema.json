@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RegimeState",
+  "type": "object",
+  "required": [
+    "as_of_date",
+    "regime_label",
+    "regime_confidence",
+    "regime_notes",
+    "regime_score_total"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "regime_label": {
+      "type": "string"
+    },
+    "regime_confidence": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "regime_notes": {
+      "type": "string"
+    },
+    "regime_score_total": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

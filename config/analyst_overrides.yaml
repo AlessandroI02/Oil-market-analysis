@@ -1,0 +1,26 @@
+# Analyst override template for V2.
+# Only add the fields you want to override.
+
+global:
+  notes: "Analyst overrides are optional and should be documented with rationale."
+
+companies:
+  XOM:
+    include_flag: true
+    bucket_override: null
+    confidence_override: null
+    route_weight_overrides: {}
+    retail_weight_overrides: {}
+    valuation_assumption_overrides: {}
+    catalyst_importance_override: null
+    analyst_notes: ""
+
+  CVX:
+    include_flag: true
+    bucket_override: null
+    confidence_override: null
+    route_weight_overrides: {}
+    retail_weight_overrides: {}
+    valuation_assumption_overrides: {}
+    catalyst_importance_override: null
+    analyst_notes: ""
