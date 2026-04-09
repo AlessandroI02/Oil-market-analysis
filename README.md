@@ -1,6 +1,6 @@
 # Hormuz Integrated Oil Research System V2.3
 
-Institutional-grade local Python research pipeline for evaluating listed integrated oil equities as expressions of a prolonged Strait of Hormuz disruption.
+local Python research pipeline for evaluating listed integrated oil equities as expressions of a prolonged Strait of Hormuz disruption.
 
 Repo boundary: this project is Repo 1 (upstream market intelligence). It is not a full valuation engine and not a final investment-conviction engine.
 
